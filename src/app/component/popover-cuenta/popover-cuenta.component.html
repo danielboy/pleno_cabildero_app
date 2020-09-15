@@ -1,0 +1,52 @@
+<ion-header  [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-label>Iniciar Sección</ion-label>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div>
+      <ion-item>
+        <ion-label position="fixed"><b>Usuario</b></ion-label>
+        <ion-input></ion-input>
+     </ion-item>
+     <ion-item>
+        <ion-label position="fixed"><b>Contraseña</b></ion-label>
+        <ion-input></ion-input>
+     </ion-item>
+     <a [routerLink]="'/registro'" (click)="closePopover()"  class="text-registro"><b>Registrarme</b></a>
+    <div class="botones">
+      <ion-button color="danger" (click)="closePopover()" size="small" >Cancelar</ion-button>  <ion-button (click)="closePopover()" color="success"   size="small">Iniciar</ion-button>
+    </div>
+   </div>
+ <!-- <ion-card *ngIf="segmentCuenta === 'registro'">
+<ion-card-content>
+  <ion-item>
+    <ion-label position="floating"><b>Nombre</b></ion-label>
+    <ion-input></ion-input>
+ </ion-item>
+ <ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>Apellido 1</b></ion-label>
+    <ion-input></ion-input>
+ </ion-item>
+ <ion-item>
+  <ion-label position="floating"><b>Apellido 2</b></ion-label>
+  <ion-input></ion-input>
+</ion-item>
+  <ion-item>
+    <ion-label position="floating"><b>Usuario</b></ion-label>
+    <ion-input></ion-input>
+ </ion-item>
+  <ion-label position="floating"><b>Codigo Postal</b></ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed"><b>Contraseña</b></ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<div class="botones">
+<ion-button color="danger" (click)="closePopover()" >Cancelar</ion-button>  <ion-button (click)="closePopover()" color="success" >Entrar</ion-button>
+</div>
+</ion-card-content>
+</ion-card>-->
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "pleno_ciudadano",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

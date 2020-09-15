@@ -1,0 +1,90 @@
+
+ion-header{
+    &.header-md:after{
+        background-image: none;
+    }
+    button{
+        background-color: transparent;
+    }
+    ion-icon{
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+.header-ios ion-toolbar:last-child {
+    --border-width: 0 0 0;
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+
+ion-button{
+    font-size: 12px;
+}
+
+
+.card-content-md p {
+    margin-bottom: 1em;
+}
+
+#btn_cerrar ion-fab-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  ion-list{
+    background: #c9c9c81a !important;
+  }
+  
+  ion-card {
+    background: #c9c9c81a;
+  }
+
+  ion-content{
+    --ion-background-color:#fff;
+  }
+
+  .segmentos{
+      text-align: center;
+      height: 300px ;
+  }
+  .label{
+    margin: 40% 0%;
+  }
+
+  .profile-item {
+    text-align: center;
+    margin: 10% 0% 5% 0%;
+  }
+  
+  .profile-picture {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 3px;
+    border-radius: 100%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0 auto;
+    width: 80px;
+    height: 110px;
+    overflow: hidden;
+  }
+  
+  .profile-picture img {
+    width: 128px;
+    border-radius: 100%;
+  }
+  
+  .profile-name {
+    text-align: center;
+    margin: 5% 0%;
+   // padding-top: 20px;
+    //font-size: x-large !important;
+    font-weight: bold !important;
+    //text-transform: capitalize;
+  }
+

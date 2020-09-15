@@ -1,0 +1,72 @@
+<!--<ion-header>
+  <ion-toolbar>
+      <ion-button (click)="dismiss()"  slot="start" color="primary"  id="btn_cerrar">
+        <ion-icon name="close-circle" color="white"></ion-icon>
+      </ion-button>
+  </ion-toolbar
+  
+</ion-header> -->
+
+<ion-content  [fullscreen]="false">
+  
+  <ion-fab horizontal="start" vertical="top" slot="fixed" id="btn_cerrar">
+    <ion-fab-button color="dark" (click)="dismiss()" >
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+    <ion-card class="main-content card card-noticia">
+        <ion-img [src]="(post.imagen || '../../assets/i/default.png')"> </ion-img>
+    <ion-card-content>
+      
+
+  <ion-fab horizontal="end" vertical="top" slot="fixed" edge size="small">
+    <ion-fab-button color="violeta">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="facebook" >
+        <ion-icon color="white" name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="twitter" >
+        <ion-icon color="white" name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="whatsapp" >
+        <ion-icon color="white" name="logo-whatsapp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="dark-blue">
+        <ion-icon color="white" name="exit"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+      <ion-card-title color="dark">
+        {{post.titulo}}
+      </ion-card-title>
+      <p class="ion-text-right"><ion-datetime displayFormat="MMMM DD, YYYY" value="{{post.fecha}}" 
+        monthNames= "Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre"
+        no-wrap disabled></ion-datetime></p>
+      <div [innerHTML]="post.texto"></div>
+    </ion-card-content>
+   <!-- <ion-row class="ion-no-padding" nowrap>
+      <ion-col col-4 class="ion-text-left">
+        <ion-button fill="clear" size="small" color="piida" icon-left (click)="dismiss()">
+          <ion-icon name='arrow-back'></ion-icon>
+          Regresar
+        </ion-button>
+      </ion-col>
+      <ion-col col-4 class="ion-text-center">
+        <ion-button fill="clear" size="small"  color="piida" icon-left (click)="openPage(post.url)">
+          <ion-icon name='link'></ion-icon>
+          Abrir web
+        </ion-button>
+      </ion-col>
+      <ion-col col-4 class="ion-text-right">
+        <ion-button fill="clear" size="small" color="piida" icon-left (click)="share(post)">
+          <ion-icon name='md-share'></ion-icon>
+          Compartir
+        </ion-button>
+      </ion-col>
+    </ion-row>-->
+  </ion-card>
+
+</ion-content>
