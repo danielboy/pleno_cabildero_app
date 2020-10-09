@@ -25,7 +25,10 @@
        padding-top: 10px;
    }   
    
-
+   .logo {
+        margin: 1% 15% 1% 15%;
+        max-width: 70% !important;
+   }
    
    ion-card-title {
        color: #1A1A1A;
@@ -35,7 +38,6 @@
       border: #C9C9C8 1px solid;
     //  max-width: 50% !important;
    }
-   
    
    hr {
        border-bottom: 2px solid #262626 !important;

@@ -14,7 +14,7 @@ export class PopoverCuentaComponent /*implements OnInit*/ {
 
   constructor(
     // private navParams: NavParams,
-    public popover: PopoverController,
+    public popover: PopoverController
   ) {
 
   }

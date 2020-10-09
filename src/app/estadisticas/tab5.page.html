@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row  class="ion-align-items-center">
+        <ion-col size="12">
+          <img class="logo" src="../../assets/i/Logo_Lineal.png">
+        </ion-col>
+       <!-- <ion-col size="3"  color="light">   
+        <ion-button size="small" color="dark" shape="round" fill="outline" class="btn_seccion"  (click)="cuenta()"><b>Cuenta</b></ion-button>
+          <ion-item   lines="none">
+            <ion-avatar slot="">
+              <img src="../../assets/varios/avatar.jpg">
+            </ion-avatar>
+        </ion-item>
+      </ion-col>-->
+  </ion-row>
+</ion-grid>
+    <ion-title>
+      <span><b> Análisis y Estadísticas</b></span>
+      <hr>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+
+  <div>
+    <ion-card color="">
+      <ion-card-header>
+        <ion-card-title>
+          <b>Ranking</b>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+         <b> Representaciones y Grupos Parlamentarios</b>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <!--<ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Ranking
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>-->
+  </div>
+
+</ion-content>

@@ -9,13 +9,6 @@ import { PopoverCuentaComponent } from '../component/popover-cuenta/popover-cuen
 })
 export class Tab2Page {
 
-  logs = [{time: new Date(), title: 'testing 1'},
-  {time: new Date(), title: 'testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2'},
-  {time: new Date(), title: 'testing 3 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2'},
-  {time: new Date(), title: 'testing 4 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2'},
-  {time: new Date(), title: 'testing 5 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2'},
-  {time: new Date(), title: 'testing 6 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2 testing 2'} ];
-
   constructor(public Popover: PopoverController) {}
 
   async cuenta() {

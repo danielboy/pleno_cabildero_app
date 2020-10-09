@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
-import { DetailsPage } from './details/details.page';
-import { ModalController, ToastController, LoadingController } from '@ionic/angular';
+// import { ModalController } from '@ionic/angular';
 import { PopoverController } from '@ionic/angular';
 import { PopoverCuentaComponent } from '../component/popover-cuenta/popover-cuenta.component';
 
 @Component({
-  selector: 'app-tab4',
-  templateUrl: 'tab4.page.html',
-  styleUrls: ['tab4.page.scss']
+  selector: 'app-tab3',
+  templateUrl: 'tab3.page.html',
+  styleUrls: ['tab3.page.scss']
 })
-export class Tab4Page {
+export class Tab3Page {
 
-  segmentModel = 'Diputados';
+  comi = 'all';
 
-  senadores = [
+  lists = [
     {
       nombre: 'Miguel Ángel Navarro Quintero',
       suplente: 'Daniel Sepúlveda Árcega',
@@ -21,9 +20,9 @@ export class Tab4Page {
       tipo_eleccion: 'Mayoría Relativa',
       partido: 'MORENA',
       entidad: 'Nayarit',
+      comision: 'Salud',
       cv: '',
-      iniciativas: '',
-      proposiciones: '',
+      mensajes: '',
       asistencias: '',
       votaciones: '',
       imagen: 'assets/varios/navarro.jpg'
@@ -35,9 +34,9 @@ export class Tab4Page {
       tipo_eleccion: 'Primera Minoria',
       partido: 'PAN',
       entidad: 'Nayarit',
+      comision: 'Turismo',
       cv: '',
-      iniciativas: '',
-      proposiciones: '',
+      mensajes: '',
       asistencias: '',
       votaciones: '',
       imagen: 'assets/varios/gloria.jpg'
@@ -49,16 +48,13 @@ export class Tab4Page {
       tipo_eleccion: 'Mayoría Relativa',
       partido: 'PT',
       entidad: 'Nayarit',
+      comision: 'Salud',
       cv: '',
-      iniciativas: '',
-      proposiciones: '',
+      mensajes: '',
       asistencias: '',
       votaciones: '',
       imagen: 'assets/varios/cora.jpg'
-    }
-  ];
-
-  diputados = [
+    },
     {
       nombre: ' María Geraldine Ponce Méndez',
       suplente: 'África Azucena Sánchez Hernández',
@@ -66,9 +62,9 @@ export class Tab4Page {
       tipo_eleccion: 'Mayoría Relativa',
       partido: 'MORENA ',
       entidad: 'Nayarit',
+      comision: 'Deporte',
       cv: '',
-      iniciativas: '',
-      proposiciones: '',
+      mensajes: '',
       asistencias: '',
       votaciones: '',
       imagen: 'assets/varios/Geraldine.jpg'
@@ -80,40 +76,19 @@ export class Tab4Page {
       tipo_eleccion: 'Representación proporcional',
       partido: 'PAN ',
       entidad: 'Nayarit',
+      comision: 'Infraestructura',
       cv: '',
-      iniciativas: '',
-      proposiciones: '',
+      mensajes: '',
       asistencias: '',
       votaciones: '',
       imagen: 'assets/varios/martha.jpg'
     }
   ];
 
-  constructor(    public toast: ToastController,
-                  public modal: ModalController,
-                  public Popover: PopoverController) {}
+
+  constructor( public Popover: PopoverController )  {}
 
 
-  segmentChanged(event){
-    console.log(this.segmentModel);
-    console.log(event);
-  }
-
-  async presentModal(post) {
-    const modal = await this.modal.create({
-      component: DetailsPage,
-      componentProps: post
-    });
-    return await modal.present();
-  }
-
-  async presentToast() {
-    const toast = await this.toast.create({
-      message: 'No se cargaron las noticias, revisa tu conexión a internet.',
-      duration: 4000
-    });
-    toast.present();
-  }
 
   async cuenta() {
     const popover = await this.Popover.create({
@@ -123,5 +98,4 @@ export class Tab4Page {
     });
     return await popover.present();
   }
-
 }

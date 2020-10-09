@@ -10,18 +10,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PopoverCuentaComponent } from './component/popover-cuenta/popover-cuenta.component';
-import { PopoverPropuesta } from './tribuna/popover/popover';
 import { NotaModal } from './noticias/details/detail';
+import { IonicStorageModule } from '@ionic/storage';
+import { AuthGuardService } from './services/auth-guard.service';
+import { AuthenticationService } from './services/Authentication.service';
 
 
 
 @NgModule({
-  declarations: [AppComponent, PopoverCuentaComponent, PopoverPropuesta, NotaModal],
-  entryComponents: [PopoverCuentaComponent, PopoverPropuesta, NotaModal],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule],
+  declarations: [AppComponent, PopoverCuentaComponent, NotaModal],
+  entryComponents: [PopoverCuentaComponent, NotaModal],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,
+    AuthGuardService,
+    AuthenticationService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
